@@ -1,0 +1,51 @@
+
+margin: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+}
+
+.menu-container {
+/* background-color: bisque; */
+margin-bottom: 15px;
+padding: 20px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.menu-container_logo {
+ background-image: url(https://www.bancoprovincia.com.ar/CDN/Get/logo_2021_S);
+ height: 50px;
+ width: 200px;
+ background-repeat: no-repeat;
+}
+.menu-container_links {
+display: flex;
+align-items: center;
+}
+
+.links_left ul {
+display: flex;
+}
+
+.links_left li {
+list-style: none;
+margin-left: 5px;
+margin-right: 5px;
+}
+.link {
+text-decoration: none;
+color: #020202;
+}
+
+.link:hover {
+color: #0202025f;
+}
+
+.links_right a{
+display: inline-block;
+/* height: 40px; */
+border: 1px solid black;
+border-radius: 5px 10px 5px 10px;
+padding: 10px 5px;
+
+}
