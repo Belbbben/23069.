@@ -8,8 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <style>
+      
         #barra{
             background-color: rgb(63, 65, 65);
+            min-width: 600px;
         }
         #bara{
             background-color: rgb(63, 65, 65);
@@ -30,15 +32,22 @@
         }
         .card{
             justify-content: end;
-            align-items: end;
-             
+            align-items: end; 
         }  
+        .cardgoup{
+          display:flex;
+          justify-content: center;
+          align-items: center;
+        }
+
         
        .imagenes {
         display:flex;
-        justify-content: center;
+        justify-content: space-around;!important
         align-items: center;
+        border:grey solid 1px
        }
+       
        
        .container2{
         background-color:rgb(63, 65, 65);
@@ -50,14 +59,22 @@
        .form-floating{
         justify-content: center;
        }
+       .ul{
+        list-style: none;
+        display:flex;
+        justify-content: center;
+        text-decoration:none!important;
+       }
        #final{
         background: linear-gradient(to right, #0e293f, #035378);
-    }
+        display:flex;
+        justify-content: center;
+       }
 
     </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg  justify-content-end" id="barra">
+  <header>
+    <nav class="navbar navbar-expand-lg  justify-content-end" id="barra"  >
         <div class="container-fluid  bg-opacity-75 justify-content-end" id="bara">
         <img src="../imagenes/logo codo a codo.png" width="150" height="80">
           <a class="navbar-brand text-white" href="#">Conf Bs As</a>
@@ -86,13 +103,14 @@
         </div>
         
       </nav>
-
-      <div class="card  ">
-        <img src="../imagenes/fondo.jfif" class="card-img bg-opacity-75" alt="...">
+    </header>
+      <body>
+      <div class="card ">
+        <img src="../imagenes/fondo.jfif" class="card-img bg-opacity-75" alt="">
         <div class="card-img-overlay position-absolute top-50 end-0 translate-middle-y">
             <div class=" col-4 Baires position-absolute top-50 end-0 translate-middle-y">
                 <h2 class="card-title text-white text-end">Conf Bs As </h2>
-                <p class="card-text text-white text-end fs-4">Buenos Aires llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que estan creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que teneos para ti. Te esperamos!</p>            
+                <p class="card-text text-white text-end fs-4 ">Buenos Aires llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que estan creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que teneos para ti. Te esperamos!</p>            
                 <p class="text-end">
                   <button type="button" class="btn btn-outline-light btn-lg ">Quiero ser orador</button>
                   <button type="button" class="btn btn-success btn-lg ">Comprar Tickets</button>
@@ -109,9 +127,9 @@
         </h4>
     </div>
   
-         <div class="card-group px-5 justify-content-center ">
-          <div class="card m-2 col-3" style="width: 18rem">
-            <img src="../imagenes/steve.jfif" class="card-img-top " alt="Card image cap" >
+         <div class="card-group col-9 px-5 justify-content-center ">
+          <div class="card m-2 col-3">
+            <img src="../imagenes/steve.jfif" class="card-img-top" alt="Card image cap" >
             <div class="card-body">
               <h5 class="card-title">Steve Jobs</h5>
               <p> <button type="button" class="btn btn-warning">
@@ -125,8 +143,8 @@
             <p class="card-text">Un empresario, diseñador industrial, magnate empresarial, propietario de medios e inversor estadounidense. Fue cofundador y presidente ejecutivo de Apple​ y máximo accionista individual de The Walt Disney Company</p>
             </div>
           </div>
-          <div class="card m-2 col-3">
-            <img src="../imagenes/Bill.jpg" class="card-img-top" alt="Card image cap" >
+          <div class="card m-3 col-3">
+            <img src="../imagenes/Bill.jpg" class="card-img-top " alt="Card image cap" >
             <div class="card-body">
               <h5 class="card-title">Bill Gates</h5>
               <p> <button type="button" class="btn btn-warning">
@@ -161,7 +179,7 @@
         </div>
              <div class="row container-fluid container2 ">
                     <div class="col container2 p-0">
-                        <img src="../imagenes/holul.jfif" class="img-fluid rounded-start p-0">
+                        <img src="../imagenes/holul.jfif" class="img-fluid rounded-start p-0 ">
                     </div>
                     <div class=" col-6 text-white ">
                         <div class="card-body  ">
@@ -223,36 +241,36 @@
 
    
         <footer>
-            <nav class="navbar navbar-expand-lg  justify-content-center " id="final">
+            <div class="container-fluid foooter" id="final">
                                  
-                  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav px-8">
-                        <li class="nav-item px-3 fs-5">
-                            <a class="nav-link text-white" href="#"  >Preguntas Frecuentes</a>
+                    <ul class="ul px-8 ">
+                        <li class="item px-3 fs-5">
+                            <a class="link text-white" href="#"  >Preguntas Frecuentes</a>
                           </li>
-                      <li class="nav-item px-3 fs-5">
-                        <a class="nav-link text-white" aria-current="page" href="#">Contactanos</a>
+                      <li class=" px-3 fs-5">
+                        <a class="link text-white" aria-current="page" href="#">Contactanos</a>
+                      </li>
+                      <li class=" px-3 fs-5">
+                        <a class="link text-white" href="#">Prensa</a>
+                      </li>
+                      <li class="px-3 fs-5">
+                        <a class="link text-white" href="#">Conferencia</a>
+                      </li>
+                      <li class=" px-3 fs-5">
+                        <a class="link text-white" href="#" >Terminos y Condiciones</a>
                       </li>
                       <li class="nav-item px-3 fs-5">
-                        <a class="nav-link text-white" href="#">Prensa</a>
+                        <a class="link text-white" href="#" >Privacidad</a>
                       </li>
-                      <li class="nav-item px-3 fs-5">
-                        <a class="nav-link text-white" href="#">Conferencia</a>
-                      </li>
-                      <li class="nav-item px-3 fs-5">
-                        <a class="nav-link text-white" href="#" >Terminos y Condiciones</a>
-                      </li>
-                      <li class="nav-item px-3 fs-5">
-                        <a class="nav-link text-white" href="#" >Privacidad</a>
-                      </li>
-                      <li class="nav-item px-3 fs-5">
-                        <a class="nav-link text-white" href="#" >Estudiantes</a>
+                      <li class="px-3 fs-5">
+                        <a class="link text-white" href="#" >Estudiantes</a>
                       </li>
                    </ul>
-                  </div>
+                 
                 </div>
                 
-              </nav>
+              </div>
         </footer>
 </body>
+@media (min-width: 576px)
 </html>
