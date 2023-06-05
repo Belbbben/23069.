@@ -65,6 +65,53 @@
         justify-content: center;
         text-decoration:none!important;
        }
+       #boton{
+
+          padding: 10px;
+
+          background: orange;
+
+          width: 95px;
+
+          cursor: pointer;
+
+          margin-top: 10px;
+
+          margin-bottom: 10px;
+
+          box-shadow: 0px 0px 1px #000;
+
+          display: inline-block;
+
+          }
+
+
+
+#boton:hover{
+
+opacity: .8;
+
+}
+
+
+
+#caja{
+
+width: 100%;
+
+margin: auto;
+
+height: 0px;
+
+background: #000;
+
+box-shadow: 10px 10px 3px #D8D8D8;
+
+transition: height .4s;
+
+}
+
+
        #final{
         background: linear-gradient(to right, #0e293f, #035378);
         display:flex;
@@ -74,6 +121,7 @@
     </style>
 </head>
   <header>
+    <!----------------------------------------------Barra de navegacion ----------------------------------------------------------->
     <nav class="navbar navbar-expand-lg  justify-content-end" id="barra"  >
         <div class="container-fluid  bg-opacity-75 justify-content-end" id="bara">
         <img src="../imagenes/logo codo a codo.png" width="150" height="80">
@@ -95,8 +143,8 @@
               <li class="nav-item">
                 <a class="nav-link text-secondary fs-5" href="#"><b>Conviertete en orador</b></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link ticket link-success fs-5" href="#" > <b>Comprar ticket</b></a>
+              <li class="nav-item" id="Tickets">
+                <a class="nav-link ticket link-success fs-5" href="./index1.html" > <b>Comprar ticket</b></a>
               </li>
            </ul>
           </div>
@@ -104,6 +152,8 @@
         
       </nav>
     </header>
+
+    <!----------------------------------------------primer parte----------------------------------------------------------->
       <body>
       <div class="card ">
         <img src="../imagenes/fondo.jfif" class="card-img bg-opacity-75" alt="">
@@ -113,13 +163,14 @@
                 <p class="card-text text-white text-end fs-4 ">Buenos Aires llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que estan creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que teneos para ti. Te esperamos!</p>            
                 <p class="text-end">
                   <button type="button" class="btn btn-outline-light btn-lg ">Quiero ser orador</button>
-                  <button type="button" class="btn btn-success btn-lg ">Comprar Tickets</button>
+                  <button type="button" class="btn btn-success btn-lg " >Comprar Tickets</button>
                 </p>
               
             </div>
                 
         </div>
       </div>
+      <!----------------------------------------------oradores ----------------------------------------------------------->
     <div class="text-center display-flex mt-3">
         <p class="m-0">CONOCE A LOS</p>
         <h4>
@@ -193,7 +244,7 @@
                 </div>
 
 
-        
+<!----------------------------------------------Fomulario ----------------------------------------------------------->        
         <div class="text-center display-flex m-3">
             <p class="m-0">CONVIERTETE EN UN </p>
             <h4>
@@ -205,7 +256,9 @@
               Cuéntanos de que quiere hablar! 
             </p>
         </div>
+
         <div class="form-container row" display="flex">
+          
 
             <div class="form-floating mb-3 col-3 text-black-50">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
@@ -238,8 +291,8 @@
               <button type="button" class="btn btn-success mx-auto btn-lg container-fluid">Enviar</button>
             </div>
           </div>
-
-   
+          
+              <!----------------------------------------------Botones de abajo ----------------------------------------------------------->
         <footer>
             <div class="container-fluid foooter" id="final">
                                  
@@ -272,5 +325,5 @@
               </div>
         </footer>
 </body>
-
+<script src ="index.js"></script>
 </html>
