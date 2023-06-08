@@ -33,6 +33,7 @@
         .card{
             justify-content: end;
             align-items: end; 
+            
         }  
         .cardgoup{
           display:flex;
@@ -40,14 +41,19 @@
           align-items: center;
         }
 
-        
+      
        .imagenes {
         display:flex;
         justify-content: space-around;!important
         align-items: center;
         border:grey solid 1px
        }
-       
+       .card-img-top{
+       display:inline-table;
+        justify-content: center;
+        align-items: center;
+
+       }
        
        .container2{
         background-color:rgb(63, 65, 65);
@@ -65,6 +71,7 @@
         justify-content: center;
         text-decoration:none!important;
        }
+
        #boton{
 
           padding: 10px;
@@ -87,30 +94,29 @@
 
 
 
-#boton:hover{
+          #boton:hover{
 
-opacity: .8;
+          opacity: .8;
 
-}
+          }
 
 
 
-#caja{
+          #caja{
 
-width: 100%;
+          width: 100%;
 
-margin: auto;
+          margin: auto;
 
-height: 0px;
+          height: 0px;
 
-background: #000;
+          background: #000;
 
-box-shadow: 10px 10px 3px #D8D8D8;
+          box-shadow: 10px 10px 3px #D8D8D8;
 
-transition: height .4s;
+          transition: height .4s;
 
-}
-
+          }
 
        #final{
         background: linear-gradient(to right, #0e293f, #035378);
@@ -121,10 +127,12 @@ transition: height .4s;
     </style>
 </head>
   <header>
+
     <!----------------------------------------------Barra de navegacion ----------------------------------------------------------->
-    <nav class="navbar navbar-expand-lg  justify-content-end" id="barra"  >
+ 
+    <nav class="navbar navbar-expand-lg  justify-content-end container-fluid" id="barra"  >
         <div class="container-fluid  bg-opacity-75 justify-content-end" id="bara">
-        <img src="../imagenes/logo codo a codo.png" width="150" height="80">
+        <img src="./imagenes/logo codo a codo.png" width="150" height="80">
           <a class="navbar-brand text-white" href="#">Conf Bs As</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -155,8 +163,8 @@ transition: height .4s;
 
     <!----------------------------------------------primer parte----------------------------------------------------------->
       <body>
-      <div class="card ">
-        <img src="../imagenes/fondo.jfif" class="card-img bg-opacity-75" alt="">
+      <div class="card" width="100%">
+        <img src="./imagenes/fondo.jfif" class="card-img bg-opacity-75" alt="">
         <div class="card-img-overlay position-absolute top-50 end-0 translate-middle-y">
             <div class=" col-4 Baires position-absolute top-50 end-0 translate-middle-y">
                 <h2 class="card-title text-white text-end">Conf Bs As </h2>
@@ -178,9 +186,9 @@ transition: height .4s;
         </h4>
     </div>
   
-         <div class="card-group col-9 px-5 justify-content-center ">
-          <div class="card m-2 col-3">
-            <img src="../imagenes/steve.jfif" class="card-img-top" alt="Card image cap" >
+         <div class="card-group px-5 justify-content-center">
+          <div class="card m-2" style="width:18rem">
+            <img src="./imagenes/steve.jfif" class="card-img" alt="Card image cap" >
             <div class="card-body">
               <h5 class="card-title">Steve Jobs</h5>
               <p> <button type="button" class="btn btn-warning">
@@ -194,8 +202,8 @@ transition: height .4s;
             <p class="card-text">Un empresario, diseñador industrial, magnate empresarial, propietario de medios e inversor estadounidense. Fue cofundador y presidente ejecutivo de Apple​ y máximo accionista individual de The Walt Disney Company</p>
             </div>
           </div>
-          <div class="card m-3 col-3">
-            <img src="../imagenes/Bill.jpg" class="card-img-top " alt="Card image cap" >
+          <div class="card m-3" style="width: 18rem;" >
+            <img src="./imagenes/Bill.jpg" class="card-img" alt="Card image cap" >
             <div class="card-body">
               <h5 class="card-title">Bill Gates</h5>
               <p> <button type="button" class="btn btn-warning">
@@ -209,8 +217,8 @@ transition: height .4s;
             <p class="card-text">Magnate empresarial, desarrollador de software, inversor, autor y filántropo estadounidense. Es cofundador de Microsoft, junto con su difunto amigo de la infancia Paul Allen</p>
             </div>
           </div>
-          <div class="card m-2">
-            <img src="../imagenes/adda.jfif" class="card-img-top" >
+          <div class="card m-2" style="width: 18rem;">
+            <img src="./imagenes/adda.jfif" class="card-img" >
             <div class="card-body">
               <h5 class="card-title">Adda Lovelace</h5>
               <p>
@@ -230,7 +238,7 @@ transition: height .4s;
         </div>
              <div class="row container-fluid container2 ">
                     <div class="col container2 p-0">
-                        <img src="../imagenes/holul.jfif" class="img-fluid rounded-start p-0 ">
+                        <img src="./imagenes/holul.jfif" class="img-fluid rounded-start p-0 ">
                     </div>
                     <div class=" col-6 text-white ">
                         <div class="card-body  ">
