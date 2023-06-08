@@ -1,3 +1,6 @@
+
+const edades = [];
+
 calcularAnios = () => {
 
     let fechaDeMiCumple = obtenerCumple();
@@ -25,12 +28,40 @@ calcularAnios = () => {
         plan = 'plan3';   
     }
 
-    mostrarResultado(edad + '-'+ plan);
+    //si plan es plan 1 => 1000
+    //si plan es plan 2 => 1500
+    //si plan es plan 3 => 3500
+    let costoDelPlan;
+    switch(plan) {
+        case 'plan1':
+            costoDelPlan = 1000;
+            break;
+        case 'plan2':
+            costoDelPlan = 1500;
+            break;
+        case 'plan3': 
+            costoDelPlan = 3500;
+            break;
+    }
+    
+    // mostrarResultado(edad + '-'+ plan + '-'+ costoDelPlan);
 
+    //guardar dato en localStorage
+    //cargo en array la nueva 
+    const objeto = {
+        edad: edad,
+        plan: plan,
+        costoDelPlan: costoDelPlan
+    };
+    
+    edades.push(objeto);//cargo en el array el nuevo objeto
+
+    localStorage.setItem('edad',JSON.stringify(edades));//¿es objeto o es string?
+
+    cargarDesdeLocal();
 }
 
 calcularEdad = (fechaDelFormulario) => {
-    debugger;
     // logica
     return new Date().getFullYear() - fechaDelFormulario.getFullYear();
 }
@@ -55,4 +86,58 @@ convertirFecha = (fechaSplitted) =>{
 mostrarResultado = (fechaDeMiCumpleConvetida) =>{
     document.getElementById('resultado').innerHTML =fechaDeMiCumpleConvetida;
 }
-//
+
+cargarDesdeLocal = () => {    
+    const datoEnLocal = localStorage.getItem('edad');//string porque viene del local
+    const datoEnLocalParseado = JSON.parse(datoEnLocal);//me da un objeto
+    const tabla = dibujarTabla(datoEnLocalParseado);
+    //al final actualizo una sola vez
+    mostrarResultado(tabla);
+}
+
+dibujarTabla = (lista) =>{
+    //ahora es un array
+    let edadesConcatenadas = 
+    `<table>
+        <tr>
+            <th>Edad</th>
+            <th>Plan</th>
+            <th>Costo</th>
+            <th></th>
+        </tr>
+    `;
+    for(let dato of lista) {
+        edadesConcatenadas += '<tr>'
+        edadesConcatenadas += `<td>${dato.edad}</td>`;//alt+96
+        edadesConcatenadas += `<td>${dato.plan}</td>`;//alt+96
+        edadesConcatenadas += `<td>${dato.costoDelPlan}</td>`;//alt+96
+        edadesConcatenadas += `<td>
+            <button onclick="eliminar(${dato.edad})">X</button>
+        </td>`;//alt+96
+        edadesConcatenadas += '</tr>'
+    }
+    edadesConcatenadas += '</table>'
+    return edadesConcatenadas;
+}
+eliminar = (edad) => {
+    //investigart como eliminar de un array usando el metodo
+    //.filter()
+    alert(edad);
+
+    //actualizar el localStorage con la nueva lista
+
+    //redibujar la tabla con los nuevos datos
+}
+
+
+    //investigart como eliminar de un array usando el metodo
+    const datoEnLocal = localStorage.getItem('edad');//string porque viene del local
+    const datoEnLocalParseado = JSON.parse(datoEnLocal);//me da un objeto
+    
+    //.filter()
+    //const listaFiltras = datoEnLocalParseado.filter(dato => dato.id !== id);
+
+    //actualizar el localStorage con la nueva lista
+
+    //redibujar la tabla con los nuevos datos
+   // dibujarTabla(listaFiltras);
